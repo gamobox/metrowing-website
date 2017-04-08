@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Metrowing Official Web Site</title>
+  <link rel="dns-prefetch" href="//www.youtube.com/" />
+  <link rel="dns-prefetch" href="//www.twitter.com/" />
+  <meta name="description" content="Metrowingは、楽曲制作を中心に活動している制作チームです。">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site:id" content="@szak_metrowing">
+  <meta name="twitter:creator:id" content="@gamobox">
+  <meta name="twitter:title" content="Metrowing Official Web Site">
+  <meta name="twitter:description" content="Metrowingは、楽曲制作を中心に活動している制作チームです。">
+  <meta name="twitter:image" content="http://metrowing.main.jp/assets/image/twitter-image.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="apple-touch-icon" size="180x180" href="logo.png">
+  <link rel="stylesheet" href="./assets/css/style.min.css?d=201703231313">
+  <meta name="apple-mobile-web-app-title" content="Metrowing">
+  <base href="/">
+  <style>
+    [ng-cloak] ui-view, .ng-cloak ui-view { display: none!important; }
+    [ng-cloak] .a-loader, .ng-cloak .a-loader { display: block!important; }    
+  </style>
+</head>
+<body ng-cloak>
+  <ui-view></ui-view>
+  <div class="a-loader">
+    <svg class="a-loader__circular" viewBox="25 25 50 50">
+      <circle class="a-loader__path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+  <noscript>
+    <div class="noscript-alert">お使いのブラウザで JavaScript が有効になっていないため、このサイトは開けません。有効にして再読み込みしてください。</div>
+  </noscript>
+  <script async>
+    var cb = function() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = '';
+      var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+  </script>
+  <script src="https://www.youtube.com/iframe_api" async defer></script>
+  <script src="./bundle.js?d=201703240308" async defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.m-inlineList {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: $padding-base*2;
+    }
+  }
+}

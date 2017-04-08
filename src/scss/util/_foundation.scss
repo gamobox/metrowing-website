@@ -1,0 +1,44 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: $color-body-background;
+  color: $color-body-text;
+  font-size: $font-size-root;
+  line-height: $line-height-base;
+}
+
+@include breakpoint(tablet) {
+  body {
+    font-size: $font-size-root-tablet;
+    line-height: $line-height-base-tablet;
+  }
+}
+
+::selection {
+  background: $color-black;
+  color: $color-white;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  &:hover {
+    color: darken($color-accent, 10%);
+    text-decoration: underline;
+  }
+}
+
+pre, code {
+  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+  background: #DDD;
+  border: 1px solid #AAA;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px;
+}

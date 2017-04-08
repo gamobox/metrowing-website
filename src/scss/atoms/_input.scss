@@ -1,0 +1,22 @@
+.a-input {
+  appearance: none;
+  outline: 0;
+  display: block;
+  width: 100%;
+  border: 1px solid $color-border;
+  min-height: 32px;
+  padding: $padding-base/2 $padding-base;
+  font-size: 16px;
+  border-radius: 2px;
+  transition-property: border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+  &:focus {
+    border-color: #2daed2;
+    box-shadow: 0 0 4px #2daed2;
+  }
+  &.ng-touched.ng-invalid {
+    border-color: #ef2e2e;
+    box-shadow: 0 0 4px #ef2e2e;    
+  }
+}

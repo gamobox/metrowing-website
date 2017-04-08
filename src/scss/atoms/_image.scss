@@ -1,0 +1,11 @@
+.a-image {
+  max-width: 100%;
+  &--responsive {
+    @extend .a-image;
+    width: 100%;
+  }
+  &--circle {
+    @extend .a-image;
+    border-radius: 50%;
+  }
+}

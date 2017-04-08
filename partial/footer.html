@@ -1,0 +1,42 @@
+<footer class="o-footer">
+  <div class="o-footer__container">
+    <nav class="o-footer__gnav">
+      <h4>Menu</h4>
+      <ul class="o-footer__menuList">
+        <li class="o-footer__menuItem"
+        ng-class="{'is-active': $ctrl.current === 'root.index'}">
+          <a ui-sref="root.index">index</a>
+        </li>
+        <li class="o-footer__menuItem"
+        ng-class="{'is-active': $ctrl.current === 'root.profile'}">
+          <a ui-sref="root.profile">profile</a>
+        </li>
+        <li class="o-footer__menuItem" 
+        ng-class="{'is-active': $ctrl.current === 'root.works'}">
+          <a ui-sref="root.works">works</a>
+        </li>
+        <li class="o-footer__menuItem" 
+        ng-class="{'is-active': $ctrl.current === 'root.contact'}">
+          <a ui-sref="root.contact">contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="o-footer__author">
+      <div ng-include="'partial/footer-logo.html'" class="o-footer__logo"></div>
+      <adress class="u-text-center">Email: szak@metrowing.main.jp</adress>
+
+      <ul class="m-inlineList o-footer__linkGroup">
+        <li class="m-inlineList__item"><a href="mailto:szak@metrowing.main.jp">
+          <i class="icon-mail"></i>
+        </a></li>
+        <li class="m-inlineList__item"><a href="https://twitter.com/szak_metrowing">
+          <i class="icon-twitter"></i>
+        </a></li>
+        <li class="m-inlineList__item"><a href="https://soundcloud.com/fuminorimatsumoto">
+          <i class="icon-soundcloud"></i>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="o-footer__copyright">{{ $ctrl.copyright }}</p>
+</footer>

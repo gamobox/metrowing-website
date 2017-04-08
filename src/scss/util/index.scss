@@ -1,0 +1,18 @@
+@import './mixins';
+@import './animations';
+@import './util';
+@import './foundation';
+@import './loadingBar';
+
+[stickyfill] {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+[stickyfill]::before,
+[stickyfill]::after {
+  content: '';
+  display: table;
+}

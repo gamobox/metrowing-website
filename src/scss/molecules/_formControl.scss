@@ -1,0 +1,24 @@
+.m-formControl {
+  margin-top: $padding-base;
+  margin-bottom: $padding-base;
+  display: flex;
+  flex-flow: column nowrap;
+  &__error {
+    margin-top: .5em;
+  }
+}
+
+@include breakpoint(laptop) {
+  .m-formControl {
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin-bottom: $padding-base * 3;
+    &__input {
+      flex: 1 1 100%;
+    }
+    &__label {
+      flex: 0 0 160px;
+      width: 160px;
+    }
+  }
+}

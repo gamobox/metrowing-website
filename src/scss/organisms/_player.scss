@@ -1,0 +1,44 @@
+.o-player {
+  &__trackList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 180px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  &__header {
+    border-bottom: 1px solid $color-border;
+    text-align: center;
+    padding: $padding-base*4 $padding-base*2;
+  }
+  &__control {
+    width: 280px;
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between
+  }
+  &__controlButton {
+    padding: .5rem;
+    &.is-disabled {
+      opacity: .25;
+    }
+  }
+  &__user {
+    font-weight: normal;
+    margin: .5rem 0;
+  }
+  &__currentPlaying {
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 16px;
+    height: 16px;
+    margin: .5rem 0;
+  }
+  &__footer {
+    padding: $padding-base * 2;
+    font-size: 10px;
+    text-align: right;
+  }
+}

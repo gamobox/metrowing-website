@@ -1,0 +1,46 @@
+.l-article {
+  &__title {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    small {
+      display: block;
+      font-size: .8rem;
+      color: #888;
+    }
+  }
+  &__publishDate {
+    display: block;
+    font-size: .75rem;
+    color: $color-gray-light;
+  }
+  &__link {
+    font-size: .75rem;
+  }
+  &__copyright {
+    font-size: .75rem;
+    color: $color-gray-light;
+    margin-bottom: .5em;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+@include breakpoint(laptop) {
+  .l-article {
+    &__title {
+      font-size: 2rem;
+      small {
+        display: inline;
+        font-size: 1rem;
+        margin-left: 2rem;
+      }
+    }
+    &__link {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.m-progressBar {
+  position: relative;
+  height: 24px;
+  width: 320px;
+  margin: auto;
+  max-width: 100%;
+  .a-progress {
+    margin: .25rem auto .5rem;
+    max-width: calc(100% - 16px);
+  }
+  &__time {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    line-height: 1;
+  }
+  &__time--current {
+    left: $padding-base;
+  }
+  &__time--duration {
+    right: $padding-base;
+  }
+}

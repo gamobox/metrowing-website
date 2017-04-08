@@ -1,0 +1,13 @@
+<header class="o-header">
+  <div class="o-header__container">
+    <div class="o-header__brand">
+      <div ng-include="'partial/header-logo.html'"></div>
+    </div>
+    <app-navigation class="o-header__navigation" current="{{$state.current.name}}" sticky></app-navigation>
+  </div>
+</header>
+<main class="l-main">
+  <div ui-view="main" class="l-main__content"></div>
+  <div ui-view="sidebar" class="l-main__sidebar"></div>
+</main>
+<app-footer></app-footer>

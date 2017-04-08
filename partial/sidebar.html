@@ -1,0 +1,60 @@
+<div class="sidebar">
+  <div class="m-card">
+    <!--soundcloud player-->
+    <div plangular="https://soundcloud.com/fuminorimatsumoto/tracks" class="o-player">
+      <div class="o-player__header">
+        <img class="a-image--circle" width="120" height="120" src="./assets/image/soundcloud-avatar.jpg" alt="Fuminori Matsumoto">
+        <h4 class="o-player__user">Fuminori Matsumoto</h4>
+        <p class="o-player__currentPlaying">{{ track.title }}</p>
+        <div class="o-player__control">
+          <div class="o-player__controlButton o-player__controlButton--prev"
+          ng-class="{'is-disabled': index === 0}" ng-click="previous()">
+            <i class="icon-previous"></i>
+          </div>
+          <div class="o-player__controlButton o-player__controlButton--pray"
+          ng-click="playPause(index)">
+            <i class="icon-play" ng-show="!player.playing"></i>
+            <i class="icon-pause" ng-show="player.playing"></i>
+          </div>
+          <div class="o-player__controlButton o-player__controlButton--prev"
+          ng-class="{'is-disabled': index === tracks.length}" ng-click="next()">
+            <i class="icon-next"></i>
+          </div>
+        </div>
+
+        <div class="m-progressBar">
+          <progress
+            class="a-progress"
+            ng-click="seek($event)"
+            ng-value="currentTime / duration || 0">
+            {{ currentTime / duration }}
+          </progress>
+          <samp class="m-progressBar__time m-progressBar__time--current">{{ currentTime | hhmmss }}</samp>
+          <samp class="m-progressBar__time m-progressBar__time--duration">{{ duration | hhmmss }}</samp>
+        </div>
+      </div><!--/.o-player__header-->
+      <div class="o-player__body">
+        <ul class="o-player__trackList">
+          <li ng-repeat="track in tracks | limitTo: 10" class="o-player__trackItem m-track"
+          ng-click="playPause($index)" ng-class="{'active': player.playing === track.src}">
+            <div class="m-track__status">
+              <i class="m-track__statusIcon icon-play-circle" ng-show="player.playing !== track.src"></i>
+              <i class="m-track__statusIcon icon-pause-circle" ng-show="player.playing === track.src"></i>
+            </div>
+            <p class="m-track__title">{{track.title}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="o-player__footer">
+        Listen More Tracks on <a href="https://soundcloud.com/fuminorimatsumoto">SoundCloud</a>.
+      </div>
+    </div>
+  </div>
+  
+  <div class="m-card">
+    <!--twitter widget-->
+    <twitter-timeline twitter-timeline-id="'381396860323115009'"
+      twitter-timeline-options='{"link-color": "#009999"}'>
+    <twitter-timeline>
+  </div>
+</div>

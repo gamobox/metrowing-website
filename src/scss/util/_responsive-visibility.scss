@@ -1,0 +1,7 @@
+.u-visible-mobile {
+  display: block;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+

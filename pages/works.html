@@ -1,0 +1,31 @@
+<div class="o-cardGroup">
+  <div class="o-cardGroup__item m-card" ng-repeat="work in works.history">
+    <div class="l-work m-card__content">
+      <div class="l-work__year">
+        {{ work.year }}
+      </div>
+      <ul class="l-work__list m-workList">
+        <li class="m-workList__item m-media" ng-repeat="w in work.works">
+          <div class="m-media__content">
+            <h3 class="title"><span class="badge badge--type" ng-if="w.gsx$type.$t">{{ w.gsx$type.$t }}</span>{{ w.gsx$title.$t }}</h3>
+            <table class="details">
+              <tr ng-if="w.gsx$description.$t">
+                <td class="label">担当箇所</td>
+                <td><span class="description" ng-bind-html="w.gsx$description.$t | linky"></span></td>
+              </tr>
+              <tr ng-if="w.gsx$client1.$t">
+                <td class="label">提供先</td>
+                <td>
+                  <ul class="u-unstyledList">
+                    <li ng-if="w.gsx$client1.$t"><a ng-href="{{ w.gsx$client1link.$t }}">{{ w.gsx$client1.$t }}</a></li>
+                    <li ng-if="w.gsx$client2.$t"><a ng-href="{{ w.gsx$client2link.$t }}">{{ w.gsx$client2.$t }}</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+</div>

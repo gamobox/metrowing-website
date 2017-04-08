@@ -1,0 +1,39 @@
+.m-track {
+  height: 36px;
+  cursor: pointer;
+  font-size: 13px;
+  border-bottom: 1px solid $color-border;
+  display: flex;
+  align-items: center;
+  padding-left: $padding-base*2;
+  padding-right: $padding-base*2;
+  &__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    transition-duration: 350ms;
+    transition-timing-function: ease-out;
+    transition-property: font-weight, transform; 
+  }
+  &.active {
+    background: $color-accent;
+    color: $color-white;
+    .m-track__title {
+      transform: translate(.5rem, 0);
+      font-weight: bold;
+    }
+  }
+  &__status {
+    flex: 0 0 18px;
+    height: 18px;
+    width: 18px;
+    overflow: hidden;
+    margin-right: $padding-base;
+  }
+  &__statusIcon {
+    font-size: 18px;
+    line-height: 1;
+  }
+}

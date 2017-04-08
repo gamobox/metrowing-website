@@ -1,0 +1,20 @@
+.a-button {
+  appearance: none;
+  box-shadow: 0;
+  display: block;
+  width: 240px;
+  margin: auto;
+  text-align: center;
+  background: $color-black;
+  border: 1px solid $color-black;
+  border-radius: 2px;
+  padding: $padding-base;
+  color: $color-white;
+  &:hover {
+    text-decoration: none;
+    color: $color-white;
+  }
+  &.disabled, &:disabled {
+    opacity: .25;
+  }
+}

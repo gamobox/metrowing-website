@@ -1,0 +1,42 @@
+$_color-progress-background: #DDD;
+$_color-progress-current-background: $color-black;
+
+.a-progress {
+  display: block;
+  width: 280px;
+  height: 4px;
+  background-color: $_color-progress-background;
+  border: 0;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer
+}
+
+.a-progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.a-progress:not[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.a-progress::-webkit-progress-bar {
+  -webkit-appearance: none;
+  background-color: $_color-progress-background;
+  box-shadow: none;
+}
+
+.a-progress::-webkit-progress-value {
+  -webkit-appearance: none;
+  background-color: $_color-progress-current-background
+}
+
+.a-progress::-moz-progress-bar {
+  background-color: $_color-progress-current-background
+}

@@ -1,0 +1,24 @@
+.m-card {
+  background: $color-white;
+  margin-top: $padding-base*2;
+  border-radius: 1px;
+  &__content {
+    padding: $padding-base;
+  }
+  &__row {
+    display: flex;
+    border-bottom: 1px solid $color-border;
+  }
+  &__avatar {
+    margin: $padding-base*2 0;
+    text-align: center; 
+  }
+}
+
+@include breakpoint(laptop) {
+  .m-card {
+    &__content {
+      padding: $padding-base*1.5 0;
+    }
+  }
+}

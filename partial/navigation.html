@@ -1,0 +1,25 @@
+<nav class="o-navigation">
+  <div class="o-navigation__container">
+    <div class="o-navigation__title">
+      <div ng-include="'partial/navigation-logo.html'"></div>
+    </div>
+    <ul class="o-navigation__listGroup">
+      <li class="o-navigation__listItem"
+      ng-class="{'is-active': $ctrl.current === 'root.index'}">
+        <a ui-sref="root.index">index</a>
+      </li>
+      <li class="o-navigation__listItem"
+      ng-class="{'is-active': $ctrl.current === 'root.profile'}">
+        <a ui-sref="root.profile">profile</a>
+      </li>
+      <li class="o-navigation__listItem" 
+      ng-class="{'is-active': $ctrl.current === 'root.works'}">
+        <a ui-sref="root.works">works</a>
+      </li>
+      <li class="o-navigation__listItem" 
+      ng-class="{'is-active': $ctrl.current === 'root.contact'}">
+        <a ui-sref="root.contact">contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

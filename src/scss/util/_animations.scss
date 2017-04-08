@@ -1,0 +1,26 @@
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translate(0, -12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes leave {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.ng-enter {
+  animation: enter 500ms both cubic-bezier(.56,.11,.61,.93);
+  z-index: 10;
+}
+
+.ng-leave {
+  display: none;
+  // animation: leave 500ms both cubic-bezier(.56,.11,.61,.93);
+  z-index: 20;
+}

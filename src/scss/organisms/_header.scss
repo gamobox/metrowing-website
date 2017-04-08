@@ -1,0 +1,38 @@
+.o-header {
+  position: relative;
+  z-index: 100;
+  background-color: $color-header-background;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__brand {
+    text-align: center;
+  }
+}
+
+@include breakpoint(laptop) {
+  .o-header {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    &__container {
+      max-width: $container-max-width;
+      padding-left: $padding-base*2;
+      padding-right: $padding-base*2;
+      margin: auto;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    &__brand {
+      text-align: left;
+      flex: 0 0 320px;
+      width: 320px;
+    }
+    &__navigation {
+      flex: 1 1 100%;
+      margin-left: 4rem;
+      max-width: 36rem;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="o-cardGroup">
+  <div class="o-cardGroup__item m-card l-article" 
+  ng-repeat="work in top.works" ng-if="work.gsx$title.$t"
+  ng-show="$index < 10">
+    <div class="m-card__content">
+      <h2 class="l-article__title">{{ work.gsx$title.$t }}</h2>
+      <time class="l-article__publishDate">{{ work.gsx$date.$t | date:'MMM yyyy' }}</time>
+    </div>
+
+    <div class="m-card__image" ng-if="work.gsx$image.$t || work.gsx$youtube.$t">
+      <img ng-if="!work.gsx$youtube.$t && work.gsx$image.$t" class="a-image--responsive" 
+      ng-src="{{ './assets/image/works/' + work.gsx$image.$t }}" 
+      alt="{{ work.gsx$title.$t }}">
+      <youtube-video class="a-image--responsive" ng-if="work.gsx$youtube.$t" video-id="work.gsx$youtube.$t">
+    </div>
+
+    <div class="m-card__content">
+      <p>担当箇所 ： {{ work.gsx$description.$t }}</p>
+      <a class="l-article__link" ng-href="{{ work.gsx$url.$t }}" target="new" ng-if="work.gsx$url.$t">{{ work.gsx$url.$t }}</a>
+      <p class="l-article__copyright" ng-if="work.gsx$client1.$t">
+        &copy; <a ng-href="{{ work.gsx$client1link.$t }}">{{ work.gsx$client1.$t }}</a>
+      </p>
+      <p class="l-article__copyright" ng-if="work.gsx$client2.$t">
+        &copy; <a ng-href="{{ work.gsx$client2link.$t }}">{{ work.gsx$client2.$t }}</a>
+      </p>
+    </div>
+  </div>
+  <a class="a-button a-button--black" ui-sref="root.works"
+  ng-show="!top.isLoading">MORE WORKS</button>
+</div>

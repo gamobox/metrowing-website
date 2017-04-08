@@ -1,0 +1,77 @@
+$_initial-stroke-width: 0.5;
+
+.a-logo {
+  line-height: 1;
+  display: inline-block;
+  font-size: 0;
+  &--header {
+    @extend .a-logo;
+    width: 160px;
+    height: 36px;
+    margin-top: 54px;
+    margin-bottom: 30px;
+  }
+  &--animation {
+    @extend .a-logo;
+    path {
+      fill: $color-black;
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      stroke: $color-black;
+      stroke-width: $_initial-stroke-width;
+      animation: DASH 3s ease-in 1s forwards;
+    }
+  }
+  &--navigation {
+    @extend .a-logo;
+    width: 172px;
+    height: 36px;
+     path {
+      fill: $color-black;
+      stroke-width: 0;
+    }   
+  }
+  &--footer {
+    @extend .a-logo;
+    margin: 0 auto $padding-base*2;
+    width: 148px;
+    path {
+      fill: $color-white;
+      stroke-width: 0;
+    }
+  }
+}
+
+@keyframes DASH {
+  0% {
+    stroke-dashoffset: 3000;
+    stroke-width: $_initial-stroke-width;
+    fill: rgba(0, 0, 0, 0);
+  }
+  50% {
+    stroke-dashoffset: 2000;
+    stroke-width: $_initial-stroke-width;
+    fill: rgba(0, 0, 0, 0);
+  }
+  70% {
+    stroke-dashoffset: 1000;
+    stroke-width: $_initial-stroke-width;
+    fill: rgba(0, 0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+    fill: rgba(0, 0, 0, 1);
+  }
+}
+
+@include breakpoint (laptop) {
+  .a-logo {
+    &--header {
+      width: 240px;
+      height: 52px;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

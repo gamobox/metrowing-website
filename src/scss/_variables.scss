@@ -1,0 +1,48 @@
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif;
+
+$color-black: #1A1A1A;
+$color-gray-light: #AAA;
+$color-gray: #888;
+$color-gray-dark: #444;
+$color-white: #fff;
+
+$color-body-text: #353236;
+// $color-body-background: #ECEEEF;
+$color-body-background: $color-white;
+
+$color-accent: #009999;
+
+$color-navigation-background: $color-white;
+$color-header-background: $color-white;
+
+$color-footer-background: $color-black;
+$color-footer-text: $color-white;
+
+$color-border: rgba(0, 0, 0, .1);
+
+$padding-base: 8px;
+
+
+
+$breakpoints: (
+  'small'  : 30rem,
+  'medium' : 45rem,
+  'large'  : 80rem,
+);
+
+// タイポグラフィ
+$font-size-root: 14px;
+$line-height-base: 1.71428;
+$font-size-root-tablet: 16px;
+$line-height-base-tablet: 1.77777; // 32px
+$font-size-h1: 2rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.25rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.75rem;
+$font-size-main: 0.875rem;
+$font-size-small: 0.625rem;
+$font-size-smallest: 8px;
+
+$container-max-width: 64rem;
